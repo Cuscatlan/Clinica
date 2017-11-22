@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2008, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="siscooperativa"/>
+  <table-filter match-name="dbotipocuenta"/>
+  <table-filter match-name="dbodetalletransaccion"/>
+  <table-filter match-name="dboproducto"/>
+  <table-filter match-name="dbotipo"/>
+  <table-filter match-name="dbomunicipios"/>
+  <table-filter match-name="dbotipopago"/>
+  <table-filter match-name="dbocategoria"/>
+  <table-filter match-name="dboclientes"/>
+  <table-filter match-name="dboalmacen"/>
+  <table-filter match-name="dbounidad"/>
+  <table-filter match-name="dbocargo_cliente"/>
+  <table-filter match-name="dbosucursal"/>
+  <table-filter match-name="dbobeneficiarios"/>
+  <table-filter match-name="dboproveedor"/>
+  <table-filter match-name="dbocliente"/>
+  <table-filter match-name="dboempleado"/>
+  <table-filter match-name="dbotipocredito"/>
+  <table-filter match-name="dbomonedad"/>
+  <table-filter match-name="dboextras"/>
+  <table-filter match-name="dbotransaccion"/>
+  <table-filter match-name="dboprofesiones"/>
+  <table-filter match-name="dbodetalleordencompra"/>
+  <table-filter match-name="dbomovproducto"/>
+  <table-filter match-name="dboestante"/>
+  <table-filter match-name="dbotipocuota"/>
+  <table-filter match-name="dbolote"/>
+  <table-filter match-name="dboordencompra"/>
+  <table-filter match-name="dbopais"/>
+  <table-filter match-name="dbomeses"/>
+  <table-filter match-name="dbotipodocumento"/>
+  <table-filter match-name="dbosector_credito"/>
+  <table-filter match-name="dbodepartamentos"/>
+  <table-filter match-name="dbotaller"/>
+  <table-filter match-name="dbogeneral"/>
+  <table-filter match-name="dbouser"/>
+  <table-filter match-name="dbocaja"/>
+  <table-filter match-name="dbomovimiento"/>
+  <table-filter match-name="dbodepartamento"/>
+  <table-filter match-name="dbotipobanco"/>
+  <table-filter match-name="dbotipoperiodo"/>
+</hibernate-reverse-engineering>
