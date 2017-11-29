@@ -29,14 +29,66 @@ public class atencionCliente extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        btnNuevoCliente = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        pnlSolicitudCreditos = new javax.swing.JPanel();
+        tblpSolicitudCreditoProspecto = new javax.swing.JTabbedPane();
+        pnlGeneralProspecto = new javax.swing.JPanel();
+        pnlSolicitantesProspecto = new javax.swing.JPanel();
+        lblNombreProspecto = new javax.swing.JLabel();
+        lblDuiProspecto = new javax.swing.JLabel();
+        lblFechaNacimientoProspecto = new javax.swing.JLabel();
+        txtNombreSolicitanteProspecto = new javax.swing.JTextField();
+        txtDuiSolicitanteProspecto = new javax.swing.JTextField();
+        lblEmpresaProspecto = new javax.swing.JLabel();
+        cbxEsEmpleadoProspecto = new javax.swing.JCheckBox();
+        lblTelefonoProspecto = new javax.swing.JLabel();
+        lblSalarioProspecto = new javax.swing.JLabel();
+        txtEmpresaProspecto = new javax.swing.JTextField();
+        txtTelefonoProspecto = new javax.swing.JTextField();
+        txtSalarioProspecto = new javax.swing.JTextField();
+        lblTiempoLaboradoProspecto = new javax.swing.JLabel();
+        txtTiempoLaboradoProspecto = new javax.swing.JTextField();
+        lblDireccionProspecto = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txaDireccionProspecto = new javax.swing.JTextArea();
+        lblCargoProspecto = new javax.swing.JLabel();
+        txtCargoProspecto = new javax.swing.JTextField();
+        cbxEsPencionadoProspecto = new javax.swing.JCheckBox();
+        lblGradoDiscapacidadProspecto = new javax.swing.JLabel();
+        lblMontoPencionProspecto = new javax.swing.JLabel();
+        txtGradoDiscapacidadProspecto = new javax.swing.JTextField();
+        txtMontoPensionProspecto = new javax.swing.JTextField();
+        jPanel8 = new javax.swing.JPanel();
+        lblmontoProspecto = new javax.swing.JLabel();
+        lblPlazoMesesProspecto = new javax.swing.JLabel();
+        lblFormaPagoProspecto = new javax.swing.JLabel();
+        lblTipoGarantiaProspecto = new javax.swing.JLabel();
+        txtMontoProspecto = new javax.swing.JTextField();
+        txtPlazoMesesPropuesta = new javax.swing.JTextField();
+        txtFormaPagoProspecto = new javax.swing.JTextField();
+        txtTipoGarantiaProspecto = new javax.swing.JTextField();
+        dcFechaNacimientoProspecto = new com.toedter.calendar.JDateChooser();
+        pnlCriteriosBusquedaProspecto = new javax.swing.JPanel();
+        pnlReferenciasProspecto = new javax.swing.JPanel();
+        pnlReferenciasPersonalesProspecto = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblReferenciasPersonalesProspecto = new javax.swing.JTable();
+        pnlReferenciaBancariasProspecto = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblReferenciasBancariasProspecto = new javax.swing.JTable();
+        pnlReferenciaInternaProspecto = new javax.swing.JPanel();
+        lblTipoPrestamoProspecto = new javax.swing.JLabel();
+        txtTipoPrestamoProspecto = new javax.swing.JTextField();
+        lblMontoReferenciaProspecto = new javax.swing.JLabel();
+        txtMontoReferenciaProspecto = new javax.swing.JTextField();
+        pnlIngresosEgresosProspecto = new javax.swing.JPanel();
+        lblIngresosProspecto = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tblIngresosProspecto = new javax.swing.JTable();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tblEgresosProspectos = new javax.swing.JTable();
+        lblEgresosProspecto = new javax.swing.JLabel();
+        btnGuardarProspecto = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -53,61 +105,17 @@ public class atencionCliente extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        btnNuevoCliente.setText("nuevo");
-
-        jButton2.setText("editar");
-
-        jButton3.setText("inactivar");
-
-        jButton4.setText("Reporte");
+        setPreferredSize(new java.awt.Dimension(1080, 720));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(btnNuevoCliente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)))
-                .addContainerGap(130, Short.MAX_VALUE))
+            .addGap(0, 1033, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnNuevoCliente)
-                        .addComponent(jButton2)
-                        .addComponent(jButton3))
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(167, 167, 167))
+            .addGap(0, 648, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Clientes", jPanel1);
@@ -116,37 +124,497 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+            .addGap(0, 1033, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGap(0, 648, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Calendario de Pagos", jPanel2);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+        pnlSolicitantesProspecto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Solicitante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+
+        lblNombreProspecto.setText("Nombre:");
+
+        lblDuiProspecto.setText("DUI:");
+
+        lblFechaNacimientoProspecto.setText("fecha de nacimiento:");
+
+        lblEmpresaProspecto.setText("Empresa:");
+
+        cbxEsEmpleadoProspecto.setText("Es Empleado");
+
+        lblTelefonoProspecto.setText("Telefono:");
+
+        lblSalarioProspecto.setText("Salario:");
+
+        txtEmpresaProspecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmpresaProspectoActionPerformed(evt);
+            }
+        });
+
+        txtTelefonoProspecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoProspectoActionPerformed(evt);
+            }
+        });
+
+        lblTiempoLaboradoProspecto.setText("Tiempo laborado:");
+
+        lblDireccionProspecto.setText("Direccion:");
+
+        txaDireccionProspecto.setColumns(20);
+        txaDireccionProspecto.setRows(5);
+        jScrollPane3.setViewportView(txaDireccionProspecto);
+
+        lblCargoProspecto.setText("Cargo:");
+
+        cbxEsPencionadoProspecto.setText("Es pencionado");
+
+        lblGradoDiscapacidadProspecto.setText("Grado de Discapacidad:");
+
+        lblMontoPencionProspecto.setText("Monto pension:");
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Prestamo"));
+
+        lblmontoProspecto.setText("monto:");
+
+        lblPlazoMesesProspecto.setText("Plazo en meses:");
+
+        lblFormaPagoProspecto.setText("Forma de pago:");
+
+        lblTipoGarantiaProspecto.setText("Tipo de garantia:");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(lblPlazoMesesProspecto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPlazoMesesPropuesta))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(lblFormaPagoProspecto)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtFormaPagoProspecto))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(lblmontoProspecto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMontoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(lblTipoGarantiaProspecto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTipoGarantiaProspecto)))
+                .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblmontoProspecto)
+                    .addComponent(txtMontoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPlazoMesesProspecto)
+                    .addComponent(txtPlazoMesesPropuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFormaPagoProspecto)
+                    .addComponent(txtFormaPagoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTipoGarantiaProspecto)
+                    .addComponent(txtTipoGarantiaProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Solicitud de Creditos", jPanel3);
+        javax.swing.GroupLayout pnlSolicitantesProspectoLayout = new javax.swing.GroupLayout(pnlSolicitantesProspecto);
+        pnlSolicitantesProspecto.setLayout(pnlSolicitantesProspectoLayout);
+        pnlSolicitantesProspectoLayout.setHorizontalGroup(
+            pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                            .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblNombreProspecto)
+                                .addComponent(lblDuiProspecto))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtDuiSolicitanteProspecto)
+                                .addComponent(txtNombreSolicitanteProspecto)))
+                        .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                            .addComponent(lblSalarioProspecto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtSalarioProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(51, 51, 51)
+                            .addComponent(lblTiempoLaboradoProspecto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtTiempoLaboradoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                            .addComponent(lblEmpresaProspecto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtEmpresaProspecto))
+                        .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                            .addComponent(lblTelefonoProspecto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtTelefonoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                            .addComponent(lblCargoProspecto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtCargoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                            .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblFechaNacimientoProspecto)
+                                .addComponent(cbxEsEmpleadoProspecto))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(dcFechaNacimientoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                        .addComponent(lblDireccionProspecto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37)
+                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitantesProspectoLayout.createSequentialGroup()
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                                .addComponent(lblMontoPencionProspecto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMontoPensionProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbxEsPencionadoProspecto)
+                            .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                                .addComponent(lblGradoDiscapacidadProspecto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtGradoDiscapacidadProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(30, 30, 30))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlSolicitantesProspectoLayout.setVerticalGroup(
+            pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitantesProspectoLayout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitantesProspectoLayout.createSequentialGroup()
+                        .addComponent(cbxEsPencionadoProspecto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblGradoDiscapacidadProspecto)
+                            .addComponent(txtGradoDiscapacidadProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblMontoPencionProspecto)
+                            .addComponent(txtMontoPensionProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitantesProspectoLayout.createSequentialGroup()
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNombreSolicitanteProspecto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblNombreProspecto, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtDuiSolicitanteProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblDuiProspecto))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblFechaNacimientoProspecto))
+                            .addComponent(dcFechaNacimientoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbxEsEmpleadoProspecto)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEmpresaProspecto)
+                    .addComponent(txtEmpresaProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTelefonoProspecto)
+                    .addComponent(txtTelefonoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlSolicitantesProspectoLayout.createSequentialGroup()
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblSalarioProspecto)
+                            .addComponent(txtSalarioProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTiempoLaboradoProspecto)
+                            .addComponent(txtTiempoLaboradoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCargoProspecto)
+                            .addComponent(txtCargoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlSolicitantesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDireccionProspecto)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44))
+        );
+
+        pnlCriteriosBusquedaProspecto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Criterios de Busqueda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+
+        javax.swing.GroupLayout pnlCriteriosBusquedaProspectoLayout = new javax.swing.GroupLayout(pnlCriteriosBusquedaProspecto);
+        pnlCriteriosBusquedaProspecto.setLayout(pnlCriteriosBusquedaProspectoLayout);
+        pnlCriteriosBusquedaProspectoLayout.setHorizontalGroup(
+            pnlCriteriosBusquedaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 378, Short.MAX_VALUE)
+        );
+        pnlCriteriosBusquedaProspectoLayout.setVerticalGroup(
+            pnlCriteriosBusquedaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pnlGeneralProspectoLayout = new javax.swing.GroupLayout(pnlGeneralProspecto);
+        pnlGeneralProspecto.setLayout(pnlGeneralProspectoLayout);
+        pnlGeneralProspectoLayout.setHorizontalGroup(
+            pnlGeneralProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlGeneralProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlCriteriosBusquedaProspecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlSolicitantesProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        pnlGeneralProspectoLayout.setVerticalGroup(
+            pnlGeneralProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlGeneralProspectoLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(pnlGeneralProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlCriteriosBusquedaProspecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlSolicitantesProspecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        tblpSolicitudCreditoProspecto.addTab("General", pnlGeneralProspecto);
+
+        pnlReferenciasPersonalesProspecto.setBorder(javax.swing.BorderFactory.createTitledBorder("Personales y familiares"));
+
+        tblReferenciasPersonalesProspecto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Dirección", "Telefono", "Tipo"
+            }
+        ));
+        jScrollPane2.setViewportView(tblReferenciasPersonalesProspecto);
+
+        javax.swing.GroupLayout pnlReferenciasPersonalesProspectoLayout = new javax.swing.GroupLayout(pnlReferenciasPersonalesProspecto);
+        pnlReferenciasPersonalesProspecto.setLayout(pnlReferenciasPersonalesProspectoLayout);
+        pnlReferenciasPersonalesProspectoLayout.setHorizontalGroup(
+            pnlReferenciasPersonalesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReferenciasPersonalesProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlReferenciasPersonalesProspectoLayout.setVerticalGroup(
+            pnlReferenciasPersonalesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciasPersonalesProspectoLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pnlReferenciaBancariasProspecto.setBorder(javax.swing.BorderFactory.createTitledBorder("Bancarias"));
+
+        tblReferenciasBancariasProspecto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Tipo de Cuenta", "Numero de Cuenta", "Prestamo Anterior"
+            }
+        ));
+        jScrollPane4.setViewportView(tblReferenciasBancariasProspecto);
+
+        javax.swing.GroupLayout pnlReferenciaBancariasProspectoLayout = new javax.swing.GroupLayout(pnlReferenciaBancariasProspecto);
+        pnlReferenciaBancariasProspecto.setLayout(pnlReferenciaBancariasProspectoLayout);
+        pnlReferenciaBancariasProspectoLayout.setHorizontalGroup(
+            pnlReferenciaBancariasProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciaBancariasProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4)
+                .addContainerGap())
+        );
+        pnlReferenciaBancariasProspectoLayout.setVerticalGroup(
+            pnlReferenciaBancariasProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciaBancariasProspectoLayout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 15, Short.MAX_VALUE))
+        );
+
+        pnlReferenciaInternaProspecto.setBorder(javax.swing.BorderFactory.createTitledBorder("Internas"));
+
+        lblTipoPrestamoProspecto.setText("tipo de prestamo:");
+
+        lblMontoReferenciaProspecto.setText("Monto:");
+
+        txtMontoReferenciaProspecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMontoReferenciaProspectoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlReferenciaInternaProspectoLayout = new javax.swing.GroupLayout(pnlReferenciaInternaProspecto);
+        pnlReferenciaInternaProspecto.setLayout(pnlReferenciaInternaProspectoLayout);
+        pnlReferenciaInternaProspectoLayout.setHorizontalGroup(
+            pnlReferenciaInternaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciaInternaProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTipoPrestamoProspecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtTipoPrestamoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(lblMontoReferenciaProspecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtMontoReferenciaProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlReferenciaInternaProspectoLayout.setVerticalGroup(
+            pnlReferenciaInternaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciaInternaProspectoLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(pnlReferenciaInternaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTipoPrestamoProspecto)
+                    .addComponent(txtTipoPrestamoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMontoReferenciaProspecto)
+                    .addComponent(txtMontoReferenciaProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlReferenciasProspectoLayout = new javax.swing.GroupLayout(pnlReferenciasProspecto);
+        pnlReferenciasProspecto.setLayout(pnlReferenciasProspectoLayout);
+        pnlReferenciasProspectoLayout.setHorizontalGroup(
+            pnlReferenciasProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciasProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlReferenciasProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlReferenciasPersonalesProspecto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlReferenciaBancariasProspecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlReferenciaInternaProspecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnlReferenciasProspectoLayout.setVerticalGroup(
+            pnlReferenciasProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReferenciasProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlReferenciasPersonalesProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pnlReferenciaBancariasProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlReferenciaInternaProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tblpSolicitudCreditoProspecto.addTab("Referencias", pnlReferenciasProspecto);
+
+        lblIngresosProspecto.setText("Ingresos");
+
+        tblIngresosProspecto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "parentesco", "nombre", "monto", "rason"
+            }
+        ));
+        jScrollPane5.setViewportView(tblIngresosProspecto);
+
+        tblEgresosProspectos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "rason", "monto"
+            }
+        ));
+        jScrollPane6.setViewportView(tblEgresosProspectos);
+
+        lblEgresosProspecto.setText("Egresos");
+
+        javax.swing.GroupLayout pnlIngresosEgresosProspectoLayout = new javax.swing.GroupLayout(pnlIngresosEgresosProspecto);
+        pnlIngresosEgresosProspecto.setLayout(pnlIngresosEgresosProspectoLayout);
+        pnlIngresosEgresosProspectoLayout.setHorizontalGroup(
+            pnlIngresosEgresosProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlIngresosEgresosProspectoLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(pnlIngresosEgresosProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblEgresosProspecto)
+                    .addComponent(lblIngresosProspecto)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 961, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        pnlIngresosEgresosProspectoLayout.setVerticalGroup(
+            pnlIngresosEgresosProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlIngresosEgresosProspectoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblIngresosProspecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblEgresosProspecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
+        tblpSolicitudCreditoProspecto.addTab("Ingresos y egresos", pnlIngresosEgresosProspecto);
+
+        btnGuardarProspecto.setText("Guardar");
+
+        javax.swing.GroupLayout pnlSolicitudCreditosLayout = new javax.swing.GroupLayout(pnlSolicitudCreditos);
+        pnlSolicitudCreditos.setLayout(pnlSolicitudCreditosLayout);
+        pnlSolicitudCreditosLayout.setHorizontalGroup(
+            pnlSolicitudCreditosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSolicitudCreditosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tblpSolicitudCreditoProspecto)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitudCreditosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnGuardarProspecto)
+                .addGap(28, 28, 28))
+        );
+        pnlSolicitudCreditosLayout.setVerticalGroup(
+            pnlSolicitudCreditosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSolicitudCreditosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tblpSolicitudCreditoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(btnGuardarProspecto)
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Solicitud de Creditos", pnlSolicitudCreditos);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+            .addGap(0, 1033, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGap(0, 648, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Solicitud de Ahorro", jPanel4);
@@ -155,11 +623,11 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+            .addGap(0, 1033, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGap(0, 648, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Solicitud de Deposito a Plazo", jPanel5);
@@ -168,11 +636,11 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+            .addGap(0, 1033, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGap(0, 648, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Generacion de Reportes", jPanel6);
@@ -233,9 +701,9 @@ public class atencionCliente extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 3, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1))
         );
 
         pack();
@@ -254,16 +722,28 @@ public class atencionCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MoraActionPerformed
 
+    private void txtEmpresaProspectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpresaProspectoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmpresaProspectoActionPerformed
+
+    private void txtTelefonoProspectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoProspectoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoProspectoActionPerformed
+
+    private void txtMontoReferenciaProspectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoReferenciaProspectoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoReferenciaProspectoActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Mora;
-    private javax.swing.JButton btnNuevoCliente;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnGuardarProspecto;
+    private javax.swing.JCheckBox cbxEsEmpleadoProspecto;
+    private javax.swing.JCheckBox cbxEsPencionadoProspecto;
+    private com.toedter.calendar.JDateChooser dcFechaNacimientoProspecto;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -276,12 +756,64 @@ public class atencionCliente extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblCargoProspecto;
+    private javax.swing.JLabel lblDireccionProspecto;
+    private javax.swing.JLabel lblDuiProspecto;
+    private javax.swing.JLabel lblEgresosProspecto;
+    private javax.swing.JLabel lblEmpresaProspecto;
+    private javax.swing.JLabel lblFechaNacimientoProspecto;
+    private javax.swing.JLabel lblFormaPagoProspecto;
+    private javax.swing.JLabel lblGradoDiscapacidadProspecto;
+    private javax.swing.JLabel lblIngresosProspecto;
+    private javax.swing.JLabel lblMontoPencionProspecto;
+    private javax.swing.JLabel lblMontoReferenciaProspecto;
+    private javax.swing.JLabel lblNombreProspecto;
+    private javax.swing.JLabel lblPlazoMesesProspecto;
+    private javax.swing.JLabel lblSalarioProspecto;
+    private javax.swing.JLabel lblTelefonoProspecto;
+    private javax.swing.JLabel lblTiempoLaboradoProspecto;
+    private javax.swing.JLabel lblTipoGarantiaProspecto;
+    private javax.swing.JLabel lblTipoPrestamoProspecto;
+    private javax.swing.JLabel lblmontoProspecto;
+    private javax.swing.JPanel pnlCriteriosBusquedaProspecto;
+    private javax.swing.JPanel pnlGeneralProspecto;
+    private javax.swing.JPanel pnlIngresosEgresosProspecto;
+    private javax.swing.JPanel pnlReferenciaBancariasProspecto;
+    private javax.swing.JPanel pnlReferenciaInternaProspecto;
+    private javax.swing.JPanel pnlReferenciasPersonalesProspecto;
+    private javax.swing.JPanel pnlReferenciasProspecto;
+    private javax.swing.JPanel pnlSolicitantesProspecto;
+    private javax.swing.JPanel pnlSolicitudCreditos;
+    private javax.swing.JTable tblEgresosProspectos;
+    private javax.swing.JTable tblIngresosProspecto;
+    private javax.swing.JTable tblReferenciasBancariasProspecto;
+    private javax.swing.JTable tblReferenciasPersonalesProspecto;
+    private javax.swing.JTabbedPane tblpSolicitudCreditoProspecto;
+    private javax.swing.JTextArea txaDireccionProspecto;
+    private javax.swing.JTextField txtCargoProspecto;
+    private javax.swing.JTextField txtDuiSolicitanteProspecto;
+    private javax.swing.JTextField txtEmpresaProspecto;
+    private javax.swing.JTextField txtFormaPagoProspecto;
+    private javax.swing.JTextField txtGradoDiscapacidadProspecto;
+    private javax.swing.JTextField txtMontoPensionProspecto;
+    private javax.swing.JTextField txtMontoProspecto;
+    private javax.swing.JTextField txtMontoReferenciaProspecto;
+    private javax.swing.JTextField txtNombreSolicitanteProspecto;
+    private javax.swing.JTextField txtPlazoMesesPropuesta;
+    private javax.swing.JTextField txtSalarioProspecto;
+    private javax.swing.JTextField txtTelefonoProspecto;
+    private javax.swing.JTextField txtTiempoLaboradoProspecto;
+    private javax.swing.JTextField txtTipoGarantiaProspecto;
+    private javax.swing.JTextField txtTipoPrestamoProspecto;
     // End of variables declaration//GEN-END:variables
 }

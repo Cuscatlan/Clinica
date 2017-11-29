@@ -5,6 +5,7 @@
  */
 package com.avrilco.Hibernate;
 
+
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
 
