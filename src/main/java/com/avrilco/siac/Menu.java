@@ -19,6 +19,12 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        //Hacemos que aparezca en el centro de la pantalla
+        ChangeLocation();
+    }
+    
+    private void ChangeLocation(){
+        setLocationRelativeTo(null);
     }
 
     /**

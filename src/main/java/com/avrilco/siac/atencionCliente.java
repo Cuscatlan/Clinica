@@ -16,6 +16,12 @@ public class atencionCliente extends javax.swing.JFrame {
      */
     public atencionCliente() {
         initComponents();
+        //Hacemos que aparezca en el centro de la pantalla
+        ChangeLocation();
+    }
+    
+    private void ChangeLocation(){
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -89,9 +95,49 @@ public class atencionCliente extends javax.swing.JFrame {
         tblEgresosProspectos = new javax.swing.JTable();
         lblEgresosProspecto = new javax.swing.JLabel();
         btnGuardarProspecto = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        pnlSolicitudAhorro = new javax.swing.JPanel();
+        pnlSolicitanteAhorro = new javax.swing.JPanel();
+        lblNombreAhorro = new javax.swing.JLabel();
+        txtNombreAhorro = new javax.swing.JTextField();
+        lblDUIAhorro = new javax.swing.JLabel();
+        txtDUIAhorro = new javax.swing.JTextField();
+        lblFechaNacAhorro = new javax.swing.JLabel();
+        lblTelefonoAhorro = new javax.swing.JLabel();
+        txtTelefonoAhorro = new javax.swing.JTextField();
+        lblCuentaAhorro = new javax.swing.JLabel();
+        txtCuentaAhorro = new javax.swing.JTextField();
+        lblTasaAhorro = new javax.swing.JLabel();
+        lblTipoDocumentoAhorro = new javax.swing.JLabel();
+        txtTasaAhorro = new javax.swing.JTextField();
+        cboTipoDocumentoAhorro = new javax.swing.JComboBox<>();
+        cboTipoCuentaAhorro = new javax.swing.JComboBox<>();
+        lblTipoCuentaAhorro = new javax.swing.JLabel();
+        lblFechaNacAhorro1 = new javax.swing.JLabel();
+        lblMontoAhorro = new javax.swing.JLabel();
+        txtMontoAhorro = new javax.swing.JTextField();
+        lblBeneficiarioAhorro = new javax.swing.JLabel();
+        scrBeneficiarioAhorro = new javax.swing.JScrollPane();
+        txaBeneficiarioAhorro = new javax.swing.JTextArea();
+        btnGuardarAhorro = new javax.swing.JButton();
+        dcFechaAperturaAhorro = new com.toedter.calendar.JDateChooser();
+        dcFechaCancelacionAhorro = new com.toedter.calendar.JDateChooser();
+        scrSolicitudAhorro = new javax.swing.JScrollPane();
+        tblSolicitudAhorro = new javax.swing.JTable();
+        pnlBusquedaAhorro = new javax.swing.JPanel();
+        txtBusquedaNombreAhorro = new javax.swing.JTextField();
+        lblBusquedaNombreAhorro = new javax.swing.JLabel();
+        btnBusquedaBuscarAhorro = new javax.swing.JButton();
+        lblBuscarPorAhorro = new javax.swing.JLabel();
+        cboBuscarPorAhorro = new javax.swing.JComboBox<>();
+        lblBuscarFechaInicioAhorro = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        lblBuscarFechaFinAhorro = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        lblNombrePantalla = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        pnlBarraEstado = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -105,17 +151,22 @@ public class atencionCliente extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1080, 720));
+        setTitle("Atención de clientes - SIAC");
+        setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1270, 645));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+            .addGap(0, 1113, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Clientes", jPanel1);
@@ -124,11 +175,11 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+            .addGap(0, 1113, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Calendario de Pagos", jPanel2);
@@ -362,7 +413,7 @@ public class atencionCliente extends javax.swing.JFrame {
         pnlCriteriosBusquedaProspecto.setLayout(pnlCriteriosBusquedaProspectoLayout);
         pnlCriteriosBusquedaProspectoLayout.setHorizontalGroup(
             pnlCriteriosBusquedaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 378, Short.MAX_VALUE)
+            .addGap(0, 458, Short.MAX_VALUE)
         );
         pnlCriteriosBusquedaProspectoLayout.setVerticalGroup(
             pnlCriteriosBusquedaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -415,7 +466,7 @@ public class atencionCliente extends javax.swing.JFrame {
             pnlReferenciasPersonalesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReferenciasPersonalesProspectoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pnlReferenciasPersonalesProspectoLayout.setVerticalGroup(
@@ -561,7 +612,7 @@ public class atencionCliente extends javax.swing.JFrame {
                     .addComponent(lblIngresosProspecto)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 961, Short.MAX_VALUE)
                     .addComponent(jScrollPane6))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         pnlIngresosEgresosProspectoLayout.setVerticalGroup(
             pnlIngresosEgresosProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -601,33 +652,305 @@ public class atencionCliente extends javax.swing.JFrame {
                 .addComponent(tblpSolicitudCreditoProspecto, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(btnGuardarProspecto)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Solicitud de Creditos", pnlSolicitudCreditos);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+        pnlSolicitanteAhorro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Solicitante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        pnlSolicitanteAhorro.setToolTipText("");
+        pnlSolicitanteAhorro.setName(""); // NOI18N
+
+        lblNombreAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblNombreAhorro.setText("Nombre:");
+        lblNombreAhorro.setName("lblNombreAhorro"); // NOI18N
+
+        txtNombreAhorro.setName("txtNombreAhorro"); // NOI18N
+
+        lblDUIAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblDUIAhorro.setText("DUI:");
+        lblDUIAhorro.setName("lblDUIAhorro"); // NOI18N
+
+        txtDUIAhorro.setName("txtDUIAhorro"); // NOI18N
+
+        lblFechaNacAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblFechaNacAhorro.setText("Fecha de apertura:");
+
+        lblTelefonoAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblTelefonoAhorro.setText("Termino:");
+        lblTelefonoAhorro.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+
+        lblCuentaAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblCuentaAhorro.setText("Cuenta:");
+
+        lblTasaAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblTasaAhorro.setText("Tasa de interes:");
+
+        lblTipoDocumentoAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblTipoDocumentoAhorro.setText("Tipo documento:");
+        lblTipoDocumentoAhorro.setToolTipText("");
+
+        cboTipoDocumentoAhorro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cboTipoCuentaAhorro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblTipoCuentaAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblTipoCuentaAhorro.setText("Tipo de Cuenta:");
+
+        lblFechaNacAhorro1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblFechaNacAhorro1.setText("Fecha de cancelación:");
+
+        lblMontoAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblMontoAhorro.setText("Monto:");
+
+        lblBeneficiarioAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblBeneficiarioAhorro.setText("Beneficiarios:");
+
+        txaBeneficiarioAhorro.setColumns(20);
+        txaBeneficiarioAhorro.setRows(5);
+        scrBeneficiarioAhorro.setViewportView(txaBeneficiarioAhorro);
+
+        btnGuardarAhorro.setText("Guardar");
+
+        javax.swing.GroupLayout pnlSolicitanteAhorroLayout = new javax.swing.GroupLayout(pnlSolicitanteAhorro);
+        pnlSolicitanteAhorro.setLayout(pnlSolicitanteAhorroLayout);
+        pnlSolicitanteAhorroLayout.setHorizontalGroup(
+            pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                            .addComponent(lblFechaNacAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(dcFechaAperturaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                                .addComponent(lblDUIAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(txtDUIAhorro))
+                                            .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                                .addComponent(lblNombreAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(txtNombreAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtTelefonoAhorro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(31, 31, 31)
+                                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                            .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(lblFechaNacAhorro1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(lblMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(dcFechaCancelacionAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                            .addComponent(lblTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(cboTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(lblTipoCuentaAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                                            .addComponent(lblCuentaAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cboTipoCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblBeneficiarioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblTasaAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                    .addComponent(lblTelefonoAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                        .addGap(4, 4, 4)
+                                        .addComponent(txtTasaAhorro))
+                                    .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(scrBeneficiarioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))))
+                        .addGap(0, 30, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitanteAhorroLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnGuardarAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+        pnlSolicitanteAhorroLayout.setVerticalGroup(
+            pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(cboTipoCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTipoCuentaAhorro)
+                    .addComponent(txtNombreAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNombreAhorro))
+                .addGap(18, 18, 18)
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(txtDUIAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDUIAhorro)
+                    .addComponent(lblCuentaAhorro)
+                    .addComponent(txtCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lblFechaNacAhorro)
+                    .addComponent(lblFechaNacAhorro1)
+                    .addComponent(dcFechaAperturaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dcFechaCancelacionAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lblTelefonoAhorro)
+                    .addComponent(txtTelefonoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMontoAhorro)
+                    .addComponent(txtMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(txtTasaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTasaAhorro)
+                    .addComponent(lblTipoDocumentoAhorro)
+                    .addComponent(cboTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblBeneficiarioAhorro)
+                    .addComponent(scrBeneficiarioAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
+                .addComponent(btnGuardarAhorro)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Solicitud de Ahorro", jPanel4);
+        tblSolicitudAhorro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        scrSolicitudAhorro.setViewportView(tblSolicitudAhorro);
+
+        pnlBusquedaAhorro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Criterios de búqueda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+
+        txtBusquedaNombreAhorro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+
+        lblBusquedaNombreAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblBusquedaNombreAhorro.setText("Nombre/Otro:");
+
+        btnBusquedaBuscarAhorro.setText("Buscar");
+
+        lblBuscarPorAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblBuscarPorAhorro.setText("Buscar por:");
+
+        cboBuscarPorAhorro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblBuscarFechaInicioAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblBuscarFechaInicioAhorro.setText("Fecha inicio:");
+
+        jTextField2.setText("temporal");
+
+        lblBuscarFechaFinAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblBuscarFechaFinAhorro.setText("Fecha fin:");
+
+        jTextField3.setText("temporal");
+
+        javax.swing.GroupLayout pnlBusquedaAhorroLayout = new javax.swing.GroupLayout(pnlBusquedaAhorro);
+        pnlBusquedaAhorro.setLayout(pnlBusquedaAhorroLayout);
+        pnlBusquedaAhorroLayout.setHorizontalGroup(
+            pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnBusquedaBuscarAhorro))
+                    .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
+                        .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblBusquedaNombreAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(lblBuscarPorAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblBuscarFechaInicioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cboBuscarPorAhorro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtBusquedaNombreAhorro)
+                            .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblBuscarFechaFinAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())
+        );
+        pnlBusquedaAhorroLayout.setVerticalGroup(
+            pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBuscarPorAhorro)
+                    .addComponent(cboBuscarPorAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBusquedaNombreAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBusquedaNombreAhorro))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBuscarFechaInicioAhorro)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBuscarFechaFinAhorro)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(btnBusquedaBuscarAhorro))
+        );
+
+        lblNombrePantalla.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        lblNombrePantalla.setText("Solicitud de ahorro");
+
+        javax.swing.GroupLayout pnlSolicitudAhorroLayout = new javax.swing.GroupLayout(pnlSolicitudAhorro);
+        pnlSolicitudAhorro.setLayout(pnlSolicitudAhorroLayout);
+        pnlSolicitudAhorroLayout.setHorizontalGroup(
+            pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSolicitudAhorroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNombrePantalla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlSolicitudAhorroLayout.createSequentialGroup()
+                        .addGroup(pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlBusquedaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlSolicitanteAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlSolicitudAhorroLayout.setVerticalGroup(
+            pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitudAhorroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblNombrePantalla)
+                .addGap(28, 28, 28)
+                .addGroup(pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlSolicitudAhorroLayout.createSequentialGroup()
+                        .addComponent(pnlBusquedaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scrSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(pnlSolicitanteAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Solicitud de Ahorro", pnlSolicitudAhorro);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+            .addGap(0, 1113, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Solicitud de Deposito a Plazo", jPanel5);
@@ -636,14 +959,30 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+            .addGap(0, 1113, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Generacion de Reportes", jPanel6);
+
+        jLabel3.setText("Espacio para una barra de estado");
+
+        javax.swing.GroupLayout pnlBarraEstadoLayout = new javax.swing.GroupLayout(pnlBarraEstado);
+        pnlBarraEstado.setLayout(pnlBarraEstadoLayout);
+        pnlBarraEstadoLayout.setHorizontalGroup(
+            pnlBarraEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBarraEstadoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlBarraEstadoLayout.setVerticalGroup(
+            pnlBarraEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("Archivo");
 
@@ -697,13 +1036,18 @@ public class atencionCliente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(pnlBarraEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlBarraEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -740,10 +1084,18 @@ public class atencionCliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Mora;
+    private javax.swing.JButton btnBusquedaBuscarAhorro;
+    private javax.swing.JButton btnGuardarAhorro;
     private javax.swing.JButton btnGuardarProspecto;
+    private javax.swing.JComboBox<String> cboBuscarPorAhorro;
+    private javax.swing.JComboBox<String> cboTipoCuentaAhorro;
+    private javax.swing.JComboBox<String> cboTipoDocumentoAhorro;
     private javax.swing.JCheckBox cbxEsEmpleadoProspecto;
     private javax.swing.JCheckBox cbxEsPencionadoProspecto;
+    private com.toedter.calendar.JDateChooser dcFechaAperturaAhorro;
+    private com.toedter.calendar.JDateChooser dcFechaCancelacionAhorro;
     private com.toedter.calendar.JDateChooser dcFechaNacimientoProspecto;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -756,7 +1108,6 @@ public class atencionCliente extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
@@ -766,25 +1117,45 @@ public class atencionCliente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel lblBeneficiarioAhorro;
+    private javax.swing.JLabel lblBuscarFechaFinAhorro;
+    private javax.swing.JLabel lblBuscarFechaInicioAhorro;
+    private javax.swing.JLabel lblBuscarPorAhorro;
+    private javax.swing.JLabel lblBusquedaNombreAhorro;
     private javax.swing.JLabel lblCargoProspecto;
+    private javax.swing.JLabel lblCuentaAhorro;
+    private javax.swing.JLabel lblDUIAhorro;
     private javax.swing.JLabel lblDireccionProspecto;
     private javax.swing.JLabel lblDuiProspecto;
     private javax.swing.JLabel lblEgresosProspecto;
     private javax.swing.JLabel lblEmpresaProspecto;
+    private javax.swing.JLabel lblFechaNacAhorro;
+    private javax.swing.JLabel lblFechaNacAhorro1;
     private javax.swing.JLabel lblFechaNacimientoProspecto;
     private javax.swing.JLabel lblFormaPagoProspecto;
     private javax.swing.JLabel lblGradoDiscapacidadProspecto;
     private javax.swing.JLabel lblIngresosProspecto;
+    private javax.swing.JLabel lblMontoAhorro;
     private javax.swing.JLabel lblMontoPencionProspecto;
     private javax.swing.JLabel lblMontoReferenciaProspecto;
+    private javax.swing.JLabel lblNombreAhorro;
+    private javax.swing.JLabel lblNombrePantalla;
     private javax.swing.JLabel lblNombreProspecto;
     private javax.swing.JLabel lblPlazoMesesProspecto;
     private javax.swing.JLabel lblSalarioProspecto;
+    private javax.swing.JLabel lblTasaAhorro;
+    private javax.swing.JLabel lblTelefonoAhorro;
     private javax.swing.JLabel lblTelefonoProspecto;
     private javax.swing.JLabel lblTiempoLaboradoProspecto;
+    private javax.swing.JLabel lblTipoCuentaAhorro;
+    private javax.swing.JLabel lblTipoDocumentoAhorro;
     private javax.swing.JLabel lblTipoGarantiaProspecto;
     private javax.swing.JLabel lblTipoPrestamoProspecto;
     private javax.swing.JLabel lblmontoProspecto;
+    private javax.swing.JPanel pnlBarraEstado;
+    private javax.swing.JPanel pnlBusquedaAhorro;
     private javax.swing.JPanel pnlCriteriosBusquedaProspecto;
     private javax.swing.JPanel pnlGeneralProspecto;
     private javax.swing.JPanel pnlIngresosEgresosProspecto;
@@ -792,25 +1163,38 @@ public class atencionCliente extends javax.swing.JFrame {
     private javax.swing.JPanel pnlReferenciaInternaProspecto;
     private javax.swing.JPanel pnlReferenciasPersonalesProspecto;
     private javax.swing.JPanel pnlReferenciasProspecto;
+    private javax.swing.JPanel pnlSolicitanteAhorro;
     private javax.swing.JPanel pnlSolicitantesProspecto;
+    private javax.swing.JPanel pnlSolicitudAhorro;
     private javax.swing.JPanel pnlSolicitudCreditos;
+    private javax.swing.JScrollPane scrBeneficiarioAhorro;
+    private javax.swing.JScrollPane scrSolicitudAhorro;
     private javax.swing.JTable tblEgresosProspectos;
     private javax.swing.JTable tblIngresosProspecto;
     private javax.swing.JTable tblReferenciasBancariasProspecto;
     private javax.swing.JTable tblReferenciasPersonalesProspecto;
+    private javax.swing.JTable tblSolicitudAhorro;
     private javax.swing.JTabbedPane tblpSolicitudCreditoProspecto;
+    private javax.swing.JTextArea txaBeneficiarioAhorro;
     private javax.swing.JTextArea txaDireccionProspecto;
+    private javax.swing.JTextField txtBusquedaNombreAhorro;
     private javax.swing.JTextField txtCargoProspecto;
+    private javax.swing.JTextField txtCuentaAhorro;
+    private javax.swing.JTextField txtDUIAhorro;
     private javax.swing.JTextField txtDuiSolicitanteProspecto;
     private javax.swing.JTextField txtEmpresaProspecto;
     private javax.swing.JTextField txtFormaPagoProspecto;
     private javax.swing.JTextField txtGradoDiscapacidadProspecto;
+    private javax.swing.JTextField txtMontoAhorro;
     private javax.swing.JTextField txtMontoPensionProspecto;
     private javax.swing.JTextField txtMontoProspecto;
     private javax.swing.JTextField txtMontoReferenciaProspecto;
+    private javax.swing.JTextField txtNombreAhorro;
     private javax.swing.JTextField txtNombreSolicitanteProspecto;
     private javax.swing.JTextField txtPlazoMesesPropuesta;
     private javax.swing.JTextField txtSalarioProspecto;
+    private javax.swing.JTextField txtTasaAhorro;
+    private javax.swing.JTextField txtTelefonoAhorro;
     private javax.swing.JTextField txtTelefonoProspecto;
     private javax.swing.JTextField txtTiempoLaboradoProspecto;
     private javax.swing.JTextField txtTipoGarantiaProspecto;
