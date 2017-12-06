@@ -5,6 +5,11 @@
  */
 package com.avrilco.siac;
 
+import static com.avrilco.CommonFunctions.CommonFunctions.setJTableColumnsWidth;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
+import com.avrilco.Enum.Enum.*;
+
 /**
  *
  * @author DELL
@@ -18,9 +23,47 @@ public class atencionCliente extends javax.swing.JFrame {
         initComponents();
         //Hacemos que aparezca en el centro de la pantalla
         ChangeLocation();
+        InitializeGridBusquedaSolicitudAhorro();
+        CargarComboBoxes();
+        //PopulateGridSolicitudAhorro();
     }
-    
-    private void ChangeLocation(){
+
+    /**
+     *
+     * @author MCastro
+     * @description Este metodo se encarga de definir las columnas del grid
+     */
+    private void InitializeGridBusquedaSolicitudAhorro() {
+        //Inicializamos el grid
+        //Definicion de modelo
+        DefaultTableModel mdlBusquedaSolicitudAhorro = new DefaultTableModel();
+
+        //Columnas de jtable
+        mdlBusquedaSolicitudAhorro.addColumn(CriterioBusquedaAhorro.Código);
+        mdlBusquedaSolicitudAhorro.addColumn(CriterioBusquedaAhorro.Nombre);
+        mdlBusquedaSolicitudAhorro.addColumn(CriterioBusquedaAhorro.Fecha);
+        
+        //Agregamos el modelo definido antes a la tabla
+        tblSolicitudAhorro.setModel(mdlBusquedaSolicitudAhorro);
+        
+        setJTableColumnsWidth(tblSolicitudAhorro, 400, 20, 60, 20);
+    }
+
+    /**
+     *
+     * @author MCastro
+     * @description Este metodo se encarga de limpiar y cargar todos los combobox de la pantalla
+     */
+    private void CargarComboBoxes() {
+        //Aqui pondremos toda la inicializacion de los combo que se cargaran en solicitud de ahorro
+        //Limpiamos el combobox
+        cboBuscarPorAhorro.removeAllItems();
+        //Cargamos el combobox de los criterios de busqueda
+        cboBuscarPorAhorro.addItem(CriterioBusquedaAhorro.Código.toString());        
+        cboBuscarPorAhorro.addItem(CriterioBusquedaAhorro.Nombre.toString());
+    }
+
+    private void ChangeLocation() {
         setLocationRelativeTo(null);
     }
 
@@ -130,9 +173,9 @@ public class atencionCliente extends javax.swing.JFrame {
         lblBuscarPorAhorro = new javax.swing.JLabel();
         cboBuscarPorAhorro = new javax.swing.JComboBox<>();
         lblBuscarFechaInicioAhorro = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         lblBuscarFechaFinAhorro = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        dcFechaInicioBusquedaSolicitudAhorro = new com.toedter.calendar.JDateChooser();
+        dcFechaFinBusquedaSolicitudAhorro = new com.toedter.calendar.JDateChooser();
         lblNombrePantalla = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -162,7 +205,7 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1113, Short.MAX_VALUE)
+            .addGap(0, 1103, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +218,7 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1113, Short.MAX_VALUE)
+            .addGap(0, 1103, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -413,7 +456,7 @@ public class atencionCliente extends javax.swing.JFrame {
         pnlCriteriosBusquedaProspecto.setLayout(pnlCriteriosBusquedaProspectoLayout);
         pnlCriteriosBusquedaProspectoLayout.setHorizontalGroup(
             pnlCriteriosBusquedaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 458, Short.MAX_VALUE)
+            .addGap(0, 448, Short.MAX_VALUE)
         );
         pnlCriteriosBusquedaProspectoLayout.setVerticalGroup(
             pnlCriteriosBusquedaProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,7 +509,7 @@ public class atencionCliente extends javax.swing.JFrame {
             pnlReferenciasPersonalesProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReferenciasPersonalesProspectoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1026, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pnlReferenciasPersonalesProspectoLayout.setVerticalGroup(
@@ -612,7 +655,7 @@ public class atencionCliente extends javax.swing.JFrame {
                     .addComponent(lblIngresosProspecto)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 961, Short.MAX_VALUE)
                     .addComponent(jScrollPane6))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         pnlIngresosEgresosProspectoLayout.setVerticalGroup(
             pnlIngresosEgresosProspectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -711,6 +754,9 @@ public class atencionCliente extends javax.swing.JFrame {
         scrBeneficiarioAhorro.setViewportView(txaBeneficiarioAhorro);
 
         btnGuardarAhorro.setText("Guardar");
+        btnGuardarAhorro.setMaximumSize(new java.awt.Dimension(70, 23));
+        btnGuardarAhorro.setMinimumSize(new java.awt.Dimension(70, 23));
+        btnGuardarAhorro.setPreferredSize(new java.awt.Dimension(70, 23));
 
         javax.swing.GroupLayout pnlSolicitanteAhorroLayout = new javax.swing.GroupLayout(pnlSolicitanteAhorro);
         pnlSolicitanteAhorro.setLayout(pnlSolicitanteAhorroLayout);
@@ -738,29 +784,24 @@ public class atencionCliente extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(txtNombreAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addComponent(txtTelefonoAhorro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(31, 31, 31)
+                                .addGap(18, 18, 18)
                                 .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
-                                            .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(lblFechaNacAhorro1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(lblMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(txtMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(dcFechaCancelacionAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
-                                            .addComponent(lblTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(cboTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
-                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(lblTipoCuentaAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                                            .addComponent(lblCuentaAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblTipoCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(cboTipoCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(txtCuentaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
+                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblFechaNacAhorro1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtMontoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dcFechaCancelacionAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
                                 .addGroup(pnlSolicitanteAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lblBeneficiarioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -772,11 +813,15 @@ public class atencionCliente extends javax.swing.JFrame {
                                         .addComponent(txtTasaAhorro))
                                     .addGroup(pnlSolicitanteAhorroLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(scrBeneficiarioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))))
-                        .addGap(0, 30, Short.MAX_VALUE))
+                                        .addComponent(scrBeneficiarioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addComponent(lblTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cboTipoDocumentoAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSolicitanteAhorroLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnGuardarAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnGuardarAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         pnlSolicitanteAhorroLayout.setVerticalGroup(
@@ -817,7 +862,7 @@ public class atencionCliente extends javax.swing.JFrame {
                     .addComponent(lblBeneficiarioAhorro)
                     .addComponent(scrBeneficiarioAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
-                .addComponent(btnGuardarAhorro)
+                .addComponent(btnGuardarAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -832,6 +877,7 @@ public class atencionCliente extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblSolicitudAhorro.getTableHeader().setReorderingAllowed(false);
         scrSolicitudAhorro.setViewportView(tblSolicitudAhorro);
 
         pnlBusquedaAhorro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Criterios de búqueda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
@@ -851,12 +897,8 @@ public class atencionCliente extends javax.swing.JFrame {
         lblBuscarFechaInicioAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblBuscarFechaInicioAhorro.setText("Fecha inicio:");
 
-        jTextField2.setText("temporal");
-
         lblBuscarFechaFinAhorro.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblBuscarFechaFinAhorro.setText("Fecha fin:");
-
-        jTextField3.setText("temporal");
 
         javax.swing.GroupLayout pnlBusquedaAhorroLayout = new javax.swing.GroupLayout(pnlBusquedaAhorro);
         pnlBusquedaAhorro.setLayout(pnlBusquedaAhorroLayout);
@@ -864,25 +906,23 @@ public class atencionCliente extends javax.swing.JFrame {
             pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblBusquedaNombreAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                    .addComponent(lblBuscarPorAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblBuscarFechaInicioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cboBuscarPorAhorro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtBusquedaNombreAhorro)
                     .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnBusquedaBuscarAhorro))
-                    .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
-                        .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblBusquedaNombreAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(lblBuscarPorAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblBuscarFechaInicioAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(dcFechaInicioBusquedaSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblBuscarFechaFinAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cboBuscarPorAhorro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtBusquedaNombreAhorro)
-                            .addGroup(pnlBusquedaAhorroLayout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblBuscarFechaFinAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(dcFechaFinBusquedaSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBusquedaAhorroLayout.createSequentialGroup()
+                        .addGap(203, 203, 203)
+                        .addComponent(btnBusquedaBuscarAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         pnlBusquedaAhorroLayout.setVerticalGroup(
@@ -897,11 +937,11 @@ public class atencionCliente extends javax.swing.JFrame {
                     .addComponent(txtBusquedaNombreAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblBusquedaNombreAhorro))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblBuscarFechaInicioAhorro)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlBusquedaAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(dcFechaFinBusquedaSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblBuscarFechaFinAhorro)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dcFechaInicioBusquedaSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBuscarFechaInicioAhorro))
                 .addGap(20, 20, 20)
                 .addComponent(btnBusquedaBuscarAhorro))
         );
@@ -918,9 +958,9 @@ public class atencionCliente extends javax.swing.JFrame {
                 .addGroup(pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblNombrePantalla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlSolicitudAhorroLayout.createSequentialGroup()
-                        .addGroup(pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnlBusquedaAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(pnlSolicitudAhorroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(pnlBusquedaAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(scrSolicitudAhorro, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pnlSolicitanteAhorro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -946,7 +986,7 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1113, Short.MAX_VALUE)
+            .addGap(0, 1103, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -959,7 +999,7 @@ public class atencionCliente extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1113, Short.MAX_VALUE)
+            .addGap(0, 1103, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -977,7 +1017,7 @@ public class atencionCliente extends javax.swing.JFrame {
             .addGroup(pnlBarraEstadoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1098, Short.MAX_VALUE))
         );
         pnlBarraEstadoLayout.setVerticalGroup(
             pnlBarraEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1038,7 +1078,7 @@ public class atencionCliente extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlBarraEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1094,6 +1134,8 @@ public class atencionCliente extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbxEsPencionadoProspecto;
     private com.toedter.calendar.JDateChooser dcFechaAperturaAhorro;
     private com.toedter.calendar.JDateChooser dcFechaCancelacionAhorro;
+    private com.toedter.calendar.JDateChooser dcFechaFinBusquedaSolicitudAhorro;
+    private com.toedter.calendar.JDateChooser dcFechaInicioBusquedaSolicitudAhorro;
     private com.toedter.calendar.JDateChooser dcFechaNacimientoProspecto;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
@@ -1117,8 +1159,6 @@ public class atencionCliente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblBeneficiarioAhorro;
     private javax.swing.JLabel lblBuscarFechaFinAhorro;
     private javax.swing.JLabel lblBuscarFechaInicioAhorro;
