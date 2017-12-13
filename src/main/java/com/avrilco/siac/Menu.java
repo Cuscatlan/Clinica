@@ -217,13 +217,13 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jmiAtencionClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAtencionClienteActionPerformed
-        new atencionCliente().setVisible(true);
-        this.dispose();
+       new atencionCliente().setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_jmiAtencionClienteActionPerformed
 
     private void jimMoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jimMoraActionPerformed
-        new Mora().setVisible(true);
-        this.dispose();
+         new atencionCliente().setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_jimMoraActionPerformed
 
     private void jmiCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCreditosActionPerformed
