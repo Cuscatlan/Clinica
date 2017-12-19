@@ -44,7 +44,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="<c:url value='/Citas/new'/>">Programar</a></li>
-                            <li><a href="#">no Programada</a></li>
+                            <li><a href="#prueba">no Programada</a></li>
                             <li><a href="#">Cancelar</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Recetar</a></li>
