@@ -93,4 +93,11 @@ public class CitaController {
         model.addAttribute("edit",true);
         return "cancelarCita"; 
     }
+    @RequestMapping(value = { "/Recetar" }, method = RequestMethod.GET)
+    public String Recetar(@PathVariable int idcitas, ModelMap model) {   
+        Citas cita = cservice.findById(idcitas);
+        model.addAttribute("cita",cita);
+        model.addAttribute("edit",false);
+        return "cancelarCita"; 
+    }
 }

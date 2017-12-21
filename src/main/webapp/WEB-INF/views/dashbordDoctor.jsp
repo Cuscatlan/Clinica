@@ -47,7 +47,7 @@
                             <li><a href="<c:url value='/Citas/newE'/>">no Programada</a></li>
                           
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Recetar</a></li>
+                            <li><a href="<c:url value='/Citas/Recetar'/>">Recetar</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Asignar Costos</a></li>
                         </ul>
