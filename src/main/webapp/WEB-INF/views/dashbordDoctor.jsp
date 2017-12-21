@@ -44,8 +44,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="<c:url value='/Citas/new'/>">Programar</a></li>
-                            <li><a href="#prueba">no Programada</a></li>
-                            <li><a href="#">Cancelar</a></li>
+                            <li><a href="<c:url value='/Citas/newE'/>">no Programada</a></li>
+                          
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Recetar</a></li>
                             <li role="separator" class="divider"></li>
@@ -137,8 +137,8 @@
             <td>${citas.nombredoctorcita}</td>
 
 
-            <td><a href="<c:url value='/edit-${paciente.idpaciente}-employee' />">recetar</a></td>
-            <td><a href="<c:url value='/delete-${paciente.idpaciente}-employee' />">cancelar</a></td>
+            <td><a href="<c:url value='/Citas/edit-${citas.idcitas}-cita' />">Recetar</a></td>
+            <td><a href="<c:url value='/Citas/delete-${citas.idcitas}-cita' />">Cancelar</a></td>
         </tr>
     </c:forEach>
 </table>

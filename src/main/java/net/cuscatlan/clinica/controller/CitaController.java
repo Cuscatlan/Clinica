@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/Citas")
 public class CitaController {
+    
     @Autowired
     CitaService cservice;
     
@@ -30,17 +32,33 @@ public class CitaController {
         Citas cita = new Citas();
         model.addAttribute("cita", cita);
         model.addAttribute("edit", false);
+        model.addAttribute("tipo","Programada");
+        return "registrar";
+    }
+    
+    @RequestMapping(value = { "/newE" }, method = RequestMethod.GET)
+    public String newEmergencia(ModelMap model) {
+        Citas cita = new Citas();
+        model.addAttribute("cita", cita);
+        model.addAttribute("edit", false);
+        model.addAttribute("tipo","noProgramada");
+        return "registrar";
+    }
+    
+    @RequestMapping(value = { "/editC" }, method = RequestMethod.GET)
+    public String CancelarCita(ModelMap model) {
+        Citas cita = new Citas();
+        model.addAttribute("cita", cita);
+        model.addAttribute("edit", true);
+        model.addAttribute("tipo","Cancelar");
         return "registrar";
     }
     
      @RequestMapping(value = { "/new" }, method = RequestMethod.POST)
-    public String saveEmployee(@Valid Citas cita, BindingResult result,
-            ModelMap model) {
- 
+    public String saveEmployee(@Valid Citas cita, BindingResult result,ModelMap model) { 
         if (result.hasErrors()) {
             return "registrar";
         }
- 
         /*
          * Preferred way to achieve uniqueness of field [ssn] should be implementing custom @Unique annotation 
          * and applying it on field [ssn] of Model class [Employee].
@@ -57,10 +75,22 @@ public class CitaController {
         }
         */
         cservice.saveCita(cita);
- 
         model.addAttribute("success", "citas" + cita.getNombredoctorcita() + " registered successfully");
         return "success";
     }
  
-    
+    @RequestMapping(value = { "/edit-{idcitas}-cita" }, method = RequestMethod.GET)
+    public String editCitas(@PathVariable int idcitas, ModelMap model) {   
+        Citas cita = cservice.findById(idcitas);
+        model.addAttribute("cita",cita);
+        model.addAttribute("edit",true);
+        return "registrar"; 
+    }
+    @RequestMapping(value = { "/delete-{idcitas}-cita" }, method = RequestMethod.GET)
+    public String cancelarCitas(@PathVariable int idcitas, ModelMap model) {   
+        Citas cita = cservice.findById(idcitas);
+        model.addAttribute("cita",cita);
+        model.addAttribute("edit",true);
+        return "cancelarCita"; 
+    }
 }

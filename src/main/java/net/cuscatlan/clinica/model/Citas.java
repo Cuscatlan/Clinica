@@ -139,11 +139,6 @@ public class Citas  implements java.io.Serializable {
     public void setEstadocita(String estadocita) {
         this.estadocita = estadocita;
     }
-
-
-
-
-
 }
 
 

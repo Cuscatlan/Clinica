@@ -25,6 +25,7 @@ public class CitaServiceImpl implements CitaService {
 
     @Override
     public Citas findById(int id) {
+       // return dao.findById(id);
         return dao.findById(id);
     }
 
