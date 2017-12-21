@@ -5,6 +5,8 @@
  */
 package com.avrilco.siac;
 
+import com.avrilco.Seguridad.Login;
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -273,7 +275,16 @@ public class Menu extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    new Login().setVisible(true);            
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
                     // Set cross-platform Java L&F (also called "Metal")
@@ -289,9 +300,9 @@ public class Menu extends javax.swing.JFrame {
                     // handle exception
                 }
 
-                new Menu().setVisible(true);
+                new Login().setVisible(true);
             }
-        });
+        });*/
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
