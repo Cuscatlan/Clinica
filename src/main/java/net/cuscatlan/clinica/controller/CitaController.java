@@ -7,6 +7,7 @@ package net.cuscatlan.clinica.controller;
 
 import javax.validation.Valid;
 import net.cuscatlan.clinica.model.Citas;
+import net.cuscatlan.clinica.model.Receta;
 import net.cuscatlan.clinica.service.CitaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -93,11 +94,14 @@ public class CitaController {
         model.addAttribute("edit",true);
         return "cancelarCita"; 
     }
-    @RequestMapping(value = { "/Recetar" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/Recetar-{idcitas}-cita" }, method = RequestMethod.GET)
     public String Recetar(@PathVariable int idcitas, ModelMap model) {   
+        Receta receta=new Receta();
         Citas cita = cservice.findById(idcitas);
         model.addAttribute("cita",cita);
+        model.addAttribute("receta",receta);
         model.addAttribute("edit",false);
-        return "cancelarCita"; 
+        return "registrarReceta"; 
     }
+    
 }

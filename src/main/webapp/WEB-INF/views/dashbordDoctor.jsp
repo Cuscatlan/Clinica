@@ -137,7 +137,7 @@
             <td>${citas.nombredoctorcita}</td>
 
 
-            <td><a href="<c:url value='/Citas/edit-${citas.idcitas}-cita' />">Recetar</a></td>
+            <td><a href="<c:url value='/Citas/Recetar-${citas.idcitas}-cita' />">Recetar</a></td>
             <td><a href="<c:url value='/Citas/delete-${citas.idcitas}-cita' />">Cancelar</a></td>
         </tr>
     </c:forEach>
