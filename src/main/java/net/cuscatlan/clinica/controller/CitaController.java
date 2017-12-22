@@ -94,14 +94,6 @@ public class CitaController {
         model.addAttribute("edit",true);
         return "cancelarCita"; 
     }
-    @RequestMapping(value = { "/Recetar-{idcitas}-cita" }, method = RequestMethod.GET)
-    public String Recetar(@PathVariable int idcitas, ModelMap model) {   
-        Receta receta=new Receta();
-        Citas cita = cservice.findById(idcitas);
-        model.addAttribute("cita",cita);
-        model.addAttribute("receta",receta);
-        model.addAttribute("edit",false);
-        return "registrarReceta"; 
-    }
+   
     
 }
