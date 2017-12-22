@@ -6,20 +6,8 @@
 package com.avrilco.Seguridad;
 
 import com.avrilco.Controller.DbouserController;
-import com.avrilco.Entidades.Dboclientes;
-import com.avrilco.Entidades.Dbouser;
-import com.avrilco.Hibernate.HibernateUtil;
 import com.avrilco.siac.*;
-import java.util.List;
 import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import org.hibernate.Criteria;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -179,25 +167,35 @@ public class Login extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            UIManager.setLookAndFeel(
+                            UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+        try {
+        // Set cross-platform Java L&F (also called "Metal")
+        UIManager.setLookAndFeel(
+        UIManager.getSystemLookAndFeelClassName());
+        } catch (UnsupportedLookAndFeelException e) {
+        // handle exception
+        } catch (ClassNotFoundException e) {
+        // handle exception
+        } catch (InstantiationException e) {
+        // handle exception
+        } catch (IllegalAccessException e) {
+        // handle exception
+        }
+        new Login().setVisible(true);
+        }
+        });*/
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
                     // Set cross-platform Java L&F (also called "Metal")
@@ -215,7 +213,7 @@ public class Login extends javax.swing.JFrame {
 
                 new Login().setVisible(true);
             }
-        });
+        });*/
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -13,8 +13,8 @@
         </repository>
     </repositories>
     <properties>
-         <springframework.version>5.0.0.RELEASE</springframework.version>
-         <springsecurity.version>5.0.0.RELEASE</springsecurity.version>
+        <springframework.version>5.0.0.RELEASE</springframework.version>
+        <springsecurity.version>5.0.0.RELEASE</springsecurity.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -246,6 +246,12 @@
             <groupId>unknown.binary</groupId>
             <artifactId>derby</artifactId>
             <version>SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     

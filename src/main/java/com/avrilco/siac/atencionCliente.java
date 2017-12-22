@@ -9,7 +9,6 @@ import static com.avrilco.CommonFunctions.CommonFunctions.setJTableColumnsWidth;
 import com.avrilco.CommonFunctions.Operaciones;
 import com.avrilco.Entidades.Dboclientes;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
 import com.avrilco.Enum.Enum.*;
 import java.util.List;
 import java.util.ListIterator;
