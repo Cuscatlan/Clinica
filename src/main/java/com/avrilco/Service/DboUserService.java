@@ -11,21 +11,21 @@ package com.avrilco.Service;
  */
 import java.util.List;
  
-import com.avrilco.Entidades.Dbouser;
+import com.avrilco.Model.Usuario;
  
 public interface DboUserService {
  
-    Dbouser findById(int id);
+    Usuario findById(int id);
      
-    void saveUser(Dbouser dbouser);
+    void saveUser(Usuario dbouser);
      
-    void updateEmployee(Dbouser dbouser);
+    void updateEmployee(Usuario dbouser);
      
     void deleteDbouserByDui(String dui);
  
-    List<Dbouser> findAllUsers(); 
+    List<Usuario> findAllUsers(); 
      
-    Dbouser findDbouserByDui(String dui);
+    Usuario findDbouserByDui(String dui);
  
     boolean isUserDuiUnique(String dui);
      

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.avrilco.Entidades.Dbouser;
+import com.avrilco.Model.Usuario;
 import com.avrilco.Seguridad.Login;
 import com.avrilco.Service.DboUserService;
 import com.avrilco.siac.Menu;
@@ -48,12 +48,12 @@ public class DbouserController extends AppController implements ActionListener {
             String password = txtPassword.getText().trim();
             
             if(username.length() > 0 && password.length() > 0) {
-                Criteria criteria = session.createCriteria(Dbouser.class)
+                Criteria criteria = session.createCriteria(Usuario.class)
                         .add(Restrictions.eq("usuario", username))
                         .add(Restrictions.eq("pass", password));
                 
                 Object result = criteria.uniqueResult();
-                Dbouser dbouser = (Dbouser) result;
+                Usuario dbouser = (Usuario) result;
                 
                 /*JOptionPane.showMessageDialog(null,
 	                    dbouser, "MSJ",

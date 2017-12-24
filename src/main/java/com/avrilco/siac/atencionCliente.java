@@ -7,9 +7,10 @@ package com.avrilco.siac;
 
 import static com.avrilco.CommonFunctions.CommonFunctions.setJTableColumnsWidth;
 import com.avrilco.CommonFunctions.Operaciones;
-import com.avrilco.Entidades.Dboclientes;
+import com.avrilco.Model.Cliente;
 import javax.swing.table.DefaultTableModel;
 import com.avrilco.Enum.Enum.*;
+import com.avrilco.Model.Persona;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -1448,16 +1449,16 @@ public class atencionCliente extends javax.swing.JFrame {
         column = tblClientes.getColumnModel().getColumnIndexAtX(evt.getX());
         row = evt.getY() / tblClientes.getRowHeight();
         if (row < tblClientes.getRowCount() && row >= 0 && column < tblClientes.getColumnCount() && column >= 0) {
-            List<Dboclientes> lclientes;
+            List<Cliente> lclientes;
 
             lclientes = op.listaDeClientes("");
 
             clientes = lclientes.listIterator(row);
-            cseleccionado = (Dboclientes) clientes.next();
-            txtIdCliente.setText(cseleccionado.getId());
+            cseleccionado = (Cliente) clientes.next();
+           /* txtIdCliente.setText(cseleccionado.getId());
             txtNombreCliente.setText(cseleccionado.getPnombre());
             txtApellidoCliente.setText(cseleccionado.getApaterno());
-            txtDuiCliente.setText(cseleccionado.getNum_dui());
+            txtDuiCliente.setText(cseleccionado.getNum_dui());*/
             btnActualizarCliente.setEnabled(true);
             btnEliminarCliente.setEnabled(true);
             btnAgregarCliente.setEnabled(false);
@@ -1472,29 +1473,29 @@ public class atencionCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIdClienteActionPerformed
 
     private void btnEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarClienteActionPerformed
-        cseleccionado.setEstado_cliente("Inactivo");
+       // cseleccionado.setEstado_cliente("Inactivo");
         op.actualizarCliente(cseleccionado);
     }//GEN-LAST:event_btnEliminarClienteActionPerformed
 
     private void btnActualizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarClienteActionPerformed
-        cseleccionado.setPnombre(txtNombreCliente.getText());
-        cseleccionado.setApaterno(txtApellidoCliente.getText());
-        cseleccionado.setNum_dui(txtDuiCliente.getText());
+      //  cseleccionado.setPnombre(txtNombreCliente.getText());
+        //cseleccionado.setApaterno(txtApellidoCliente.getText());
+       // cseleccionado.setNum_dui(txtDuiCliente.getText());
         //cseleccionado.setId(txtIdCliente.getText());
         //cseleccionado.setEstado_cliente("Prospecto");
         op.actualizarCliente(cseleccionado);
     }//GEN-LAST:event_btnActualizarClienteActionPerformed
 
     private void btnAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienteActionPerformed
-        Dboclientes clienteN = new Dboclientes();
-        clienteN.setPnombre(txtNombreCliente.getText());
+        Cliente clienteN = new Cliente();
+      /*  clienteN.set(txtNombreCliente.getText());
         clienteN.setApaterno(txtApellidoCliente.getText());
         clienteN.setNum_dui(txtDuiCliente.getText());
         clienteN.setId(txtIdCliente.getText());
         clienteN.setEstado_cliente("Prospecto");
         // try {
         op.guardarCliente(clienteN);
-
+*/
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
 
     private void cbxEsEmpleadoCreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxEsEmpleadoCreditoActionPerformed
@@ -1736,16 +1737,16 @@ private void iniciarComponentesCredito() {
         modelo.addColumn("DUI");
         // modelo.addColumn("Segundo Apellido");
         modelo.addColumn("Estado");
-        List<Dboclientes> clientes;
+        List<Cliente> clientes;
 
         clientes = op.listaDeClientes("");
         this.clientes = clientes.listIterator();
         while (this.clientes.hasNext()) {
-            Dboclientes p = (Dboclientes) this.clientes.next();
+            Cliente p = (Cliente) this.clientes.next();
             Object[] fila = new Object[8];
-            fila[0] = p.getPnombre();
-            fila[1] = p.getNum_dui();
-            fila[2] = p.getEstado_cliente();
+            //fila[0] = p.getPnombre();
+            //fila[1] = p.getNum_dui();
+            //fila[2] = p.getEstado_cliente();
 
             modelo.addRow(fila);
         }
@@ -1754,5 +1755,5 @@ private void iniciarComponentesCredito() {
     Operaciones op = new Operaciones();
     int column = -1;
     int row = -1;
-    Dboclientes cseleccionado;
+    Cliente cseleccionado;
 }

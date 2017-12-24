@@ -5,7 +5,8 @@
  */
 package com.avrilco.CommonFunctions;
 
-import com.avrilco.Entidades.Dboclientes;
+import com.avrilco.Model.Cliente;
+import com.avrilco.Model.Usuario;
 import java.io.InputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -60,7 +61,7 @@ public class Operaciones {
     }
 
     //aqui estan las funciones de a tabla consulta
-    public String guardarCliente(Dboclientes cliente) {
+    public String guardarCliente(Cliente cliente) {
         String id = "";
         iniciarOperacion();
         id = (String) session.save(cliente);
@@ -68,29 +69,29 @@ public class Operaciones {
         return id;
     }
 
-    public void actualizarCliente(Dboclientes cliente) {
+    public void actualizarCliente(Cliente cliente) {
         iniciarOperacion();
         session.update(cliente);
         terminarOperacion();
     }
 
-    public void eliminarConsulta(Dboclientes consulta) {
+    public void eliminarConsulta(Cliente consulta) {
         iniciarOperacion();
         session.delete(consulta);
         terminarOperacion();
     }
 
-    public Dboclientes obtenerConsulta(int idconsulta) {
-        Dboclientes consulta = null;
+    public Cliente obtenerConsulta(int idconsulta) {
+        Cliente consulta = null;
         iniciarOperacion();
-        consulta = (Dboclientes) session.get(Dboclientes.class, idconsulta);
+        consulta = (Cliente) session.get(Cliente.class, idconsulta);
         terminarOperacion();
         return consulta;
     }
 
-    public List<Dboclientes> listaDeClientes(String campos) {
+    public List<Cliente> listaDeClientes(String campos) {
 
-        List<Dboclientes> listaclientes = null;
+        List<Cliente> listaclientes = null;
         iniciarOperacion();
         listaclientes = session.createQuery("from Dboclientes").list();
         
@@ -237,13 +238,13 @@ public class Operaciones {
         }
     }
 */
-    public List<Dboclientes> ConsultasPaciente(Dboclientes c) {
+    public List<Cliente> ConsultasPaciente(Cliente c) {
 
         List Historial = null;
         iniciarOperacion();
-        Criteria crit = session.createCriteria(Dboclientes.class);
-        if (c.getId() != "") {
-            crit.add(Restrictions.eq("idpaciente", c.getId()));
+        Criteria crit = session.createCriteria(Cliente.class);
+        if (c.getIdcliente()!=null ) {
+            crit.add(Restrictions.eq("idpaciente", c.getIdcliente()));
         } else {
             return null;
         }
